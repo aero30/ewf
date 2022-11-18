@@ -1,0 +1,4 @@
+local Whitelist = "Zeku" or "Blacked"
+
+if getfenv().key ~= Whitelist then print("Not Whitelisted ("..getfenv().key..")") return end
+print("Whitelisted ("..getfenv().key..")")
