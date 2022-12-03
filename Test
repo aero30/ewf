@@ -1,5 +1,8 @@
-local Requires = {}
+local Module = {}
 
-Requires["Code"] = 12345;
+Module = 
+{
+[1] = "Sup";
+}
 
-return Requires
+return Module
