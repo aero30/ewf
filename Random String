@@ -1,0 +1,57 @@
+local ee = 5
+
+--set the value "ee" to how many characters long you want the string to be.
+
+
+local ab = "abcdefghijklmnopqrstuvwxyz"
+local atoz = {
+  [1] = "a",
+  [2] = "b",
+  [3] = "c",
+  [4] = "d",
+  [5] = "e",
+  [6] = "f",
+  [7] = "g",
+  [8] = "h",
+  [9] = "i",
+  [10] = "j",
+  [11] = "k",
+  [12] = "l",
+  [13] = "m",
+  [14] = "n",
+  [15] = "o",
+  [16] = "p",
+  [17] = "q",
+  [18] = "r",
+  [19] = "s",
+  [20] = "t",
+  [21] = "u",
+  [22] = "v",
+  [23] = "w",
+  [24] = "x",
+  [25] = "y",
+  [26] = "z",
+}
+
+for i = 1,#ab do
+	print(i..' = '..'"'..ab:sub(i,i)..'"'..",")
+end
+
+aa = ""
+
+for i = 1,ee do
+	local a = math.random(1,26)
+	local b = math.random(1,2)
+	local c = atoz[a]
+	print(c)
+	aa = aa..c
+	--[[if b == 1 then
+		d = string.lower(a)
+		aa = aa..d
+	elseif b == 2 then
+		d = string.upper(a)
+		aa = aa..d
+	end]]
+end
+
+warn(aa)
