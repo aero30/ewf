@@ -1,6 +1,6 @@
 local Saber = {}
 
-function Saber.Create()
+Saber.Create = function()
 local SaberHub = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
