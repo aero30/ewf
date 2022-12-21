@@ -1,0 +1,206 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Krnl = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Execute = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local Clear = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UICorner_4 = Instance.new("UICorner")
+local Input = Instance.new("TextBox")
+local UICorner_5 = Instance.new("UICorner")
+local Settings = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local UICorner_6 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
+local SaveFile = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local Close = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+
+--Properties:
+
+Krnl.Name = "Krnl"
+Krnl.Parent = game.CoreGui
+Krnl.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = Krnl
+Main.Active = true
+Main.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Main.Position = UDim2.new(0.270394742, 0, 0.293616861, 0)
+Main.Size = UDim2.new(0, 533, 0, 260)
+Main.Draggable = true
+
+Execute.Name = "Execute"
+Execute.Parent = Main
+Execute.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Execute.Position = UDim2.new(0.0172862858, 0, 0.889417112, 0)
+Execute.Size = UDim2.new(0, 236, 0, 20)
+Execute.Font = Enum.Font.SourceSansLight
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(149, 149, 149)
+Execute.TextSize = 14.000
+
+UICorner.Parent = Execute
+
+Clear.Name = "Clear"
+Clear.Parent = Main
+Clear.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Clear.Position = UDim2.new(0.539416313, 0, 0.889417112, 0)
+Clear.Size = UDim2.new(0, 236, 0, 20)
+Clear.Font = Enum.Font.SourceSansLight
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(149, 149, 149)
+Clear.TextSize = 14.000
+
+UICorner_2.Parent = Clear
+
+TextLabel.Parent = Main
+TextLabel.Active = true
+TextLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel.Size = UDim2.new(0, 533, 0, 20)
+TextLabel.Font = Enum.Font.SourceSansLight
+TextLabel.Text = "Krnl"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 15.000
+TextLabel.TextStrokeColor3 = Color3.fromRGB(128, 204, 255)
+TextLabel.TextStrokeTransparency = 0.800
+
+UICorner_3.Parent = TextLabel
+
+ScrollingFrame.Parent = Main
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.Position = UDim2.new(0.0206378978, 0, 0.115384616, 0)
+ScrollingFrame.Size = UDim2.new(0, 513, 0, 192)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 10, 0)
+ScrollingFrame.ScrollBarThickness = 5
+ScrollingFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+UICorner_4.Parent = ScrollingFrame
+
+Input.Name = "Input"
+Input.Parent = ScrollingFrame
+Input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Input.BackgroundTransparency = 1.000
+Input.BorderSizePixel = 0
+Input.Position = UDim2.new(0.0136452243, 0, 0, 0)
+Input.Size = UDim2.new(0, 506, 0, 809)
+Input.ClearTextOnFocus = false
+Input.Font = Enum.Font.Code
+Input.MultiLine = true
+Input.Text = ""
+Input.TextColor3 = Color3.fromRGB(255, 44, 111)
+Input.TextSize = 14.000
+Input.TextWrapped = true
+Input.TextXAlignment = Enum.TextXAlignment.Left
+Input.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_5.Parent = Main
+
+Settings.Name = "Settings"
+Settings.Parent = Krnl
+Settings.Active = true
+Settings.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Settings.Position = UDim2.new(0.41842103, 0, 0.293616891, 0)
+Settings.Size = UDim2.new(0, 235, 0, 260)
+Settings.Visible = false
+Settings.Draggable = true
+
+TextLabel_2.Parent = Settings
+TextLabel_2.Active = true
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel_2.Size = UDim2.new(0, 235, 0, 20)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Settings"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 15.000
+TextLabel_2.TextStrokeColor3 = Color3.fromRGB(128, 204, 255)
+TextLabel_2.TextStrokeTransparency = 0.800
+
+UICorner_6.Parent = TextLabel_2
+
+UICorner_7.Parent = Settings
+
+SaveFile.Name = "Save File"
+SaveFile.Parent = Settings
+SaveFile.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+SaveFile.Position = UDim2.new(0.0628205016, 0, 0.266340196, 0)
+SaveFile.Size = UDim2.new(0, 204, 0, 20)
+SaveFile.Font = Enum.Font.SourceSansLight
+SaveFile.Text = "Save File"
+SaveFile.TextColor3 = Color3.fromRGB(149, 149, 149)
+SaveFile.TextSize = 14.000
+
+UICorner_8.Parent = SaveFile
+
+TextBox.Parent = Settings
+TextBox.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.076595746, 0, 0.126923084, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 27)
+TextBox.Font = Enum.Font.SourceSansLight
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
+
+Close.Name = "Close"
+Close.Parent = Settings
+Close.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Close.Position = UDim2.new(0.0585651845, 0, 0.885570943, 0)
+Close.Size = UDim2.new(0, 204, 0, 20)
+Close.Font = Enum.Font.SourceSansLight
+Close.Text = "Close"
+Close.TextColor3 = Color3.fromRGB(149, 149, 149)
+Close.TextSize = 14.000
+
+UICorner_9.Parent = Close
+
+Execute.MouseButton1Click:Connect(function()
+	if Input.Text == "Krnl.OpenSettings()" then
+		Settings.Visible = true
+	else
+		assert(loadstring(Input.Text)())
+	end
+end)
+
+Clear.MouseButton1Click:Connect(function()
+	Input.Text = ""
+end)
+
+SaveFile.MouseButton1Click:Connect(function()
+	writefile(TextBox.Text..".lua",Input.Text)
+end)
+
+Close.MouseButton1Click:Connect(function()
+	Settings.Visible = false
+end)
+
+local Sound = Instance.new("Sound",Krnl)
+Sound.SoundId = "rbxassetid://9120299506"
+Sound.Volume = .2
+
+Input.Changed:Connect(function()
+	if Input.Text == "" then return end
+	Sound:Play()
+end)
+
+game:GetService("UserInputService").InputBegan:Connect(function(k,t)
+	if t then return end
+	if k.KeyCode == Enum.KeyCode.Insert then
+		if Krnl.Enabled then
+			Krnl.Enabled = false
+		elseif not Krnl.Enabled then
+			Krnl.Enabled = true
+		end
+	end
+end)
