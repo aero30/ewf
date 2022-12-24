@@ -1,0 +1,33 @@
+function Create()
+	local BillboardGui = Instance.new("BillboardGui")
+	local TextLabel = Instance.new("TextLabel")
+	BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	BillboardGui.Active = true
+	BillboardGui.AlwaysOnTop = true
+	BillboardGui.LightInfluence = 1.000
+	BillboardGui.Size = UDim2.new(0, 200, 0, 50)
+	TextLabel.Parent = BillboardGui
+	TextLabel.Active = true
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.BackgroundTransparency = 1.000
+	TextLabel.Size = UDim2.new(0, 200, 0, 50)
+	TextLabel.Font = Enum.Font.SourceSans
+	TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel.TextSize = 15.000
+
+	return BillboardGui,TextLabel
+end
+
+local Items = "rbxassetid://7124126253" or "rbxassetid://7138918676" or "rbxassetid://875644059" or "rbxassetid://5249254947" or "rbxassetid://7218408082" or "rbxassetid://7106059151"
+
+for i,v in pairs(workspace.Item_Spawns.Items:GetDescendants()) do
+	if v:IsA("MeshPart") then
+		if v.MeshId == "rbxassetid://7124126253" or "rbxassetid://7138918676" or "rbxassetid://875644059" or "rbxassetid://5249254947" or "rbxassetid://7218408082" or "rbxassetid://7106059151" then
+			local Gui,TextLabel = Create()
+
+			Gui.Parent = v
+			TextLabel.Text = v.Parent.ProximityPrompt.ObjectText
+			TextLabel.TextColor3 = Color3.fromRGB(math.random(0,255),math.random(0,255),math.random(0,255))
+		end
+	end
+end
