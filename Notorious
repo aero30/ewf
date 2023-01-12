@@ -1,0 +1,181 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Notorious = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Bar = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Execute = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Save = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Clear = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextBox = Instance.new("TextBox")
+local UICorner_6 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
+local SaveBox = Instance.new("TextBox")
+local UICorner_8 = Instance.new("UICorner")
+
+--Properties:
+
+Notorious.Name = "Notorious"
+Notorious.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Notorious.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = Notorious
+Main.Active = true
+Main.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Main.BackgroundTransparency = 0.500
+Main.Position = UDim2.new(0.266205132, 0, 0.0884567201, 0)
+Main.Size = UDim2.new(0, 392, 0, 313)
+Main.Draggable = true
+
+UICorner.Parent = Main
+
+Bar.Name = "Bar"
+Bar.Parent = Main
+Bar.BackgroundColor3 = Color3.fromRGB(255, 163, 5)
+Bar.BackgroundTransparency = 0.300
+Bar.Size = UDim2.new(0, 392, 0, 17)
+Bar.Font = Enum.Font.SourceSansLight
+Bar.Text = "Notorious"
+Bar.TextColor3 = Color3.fromRGB(255, 255, 255)
+Bar.TextSize = 14.000
+
+UICorner_2.Parent = Bar
+
+Execute.Name = "Execute"
+Execute.Parent = Main
+Execute.BackgroundColor3 = Color3.fromRGB(255, 163, 5)
+Execute.BackgroundTransparency = 0.300
+Execute.Position = UDim2.new(0.0204081628, 0, 0.926517546, 0)
+Execute.Size = UDim2.new(0, 47, 0, 17)
+Execute.Font = Enum.Font.SourceSansLight
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute.TextSize = 14.000
+
+UICorner_3.Parent = Execute
+
+Save.Name = "Save"
+Save.Parent = Main
+Save.BackgroundColor3 = Color3.fromRGB(255, 163, 5)
+Save.BackgroundTransparency = 0.300
+Save.Position = UDim2.new(0.617346942, 0, 0.926517546, 0)
+Save.Size = UDim2.new(0, 47, 0, 17)
+Save.Font = Enum.Font.SourceSansLight
+Save.Text = "Save"
+Save.TextColor3 = Color3.fromRGB(255, 255, 255)
+Save.TextSize = 14.000
+
+UICorner_4.Parent = Save
+
+Clear.Name = "Clear"
+Clear.Parent = Main
+Clear.BackgroundColor3 = Color3.fromRGB(255, 163, 5)
+Clear.BackgroundTransparency = 0.300
+Clear.Position = UDim2.new(0.188775539, 0, 0.926517546, 0)
+Clear.Size = UDim2.new(0, 47, 0, 17)
+Clear.Font = Enum.Font.SourceSansLight
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clear.TextSize = 14.000
+
+UICorner_5.Parent = Clear
+
+ScrollingFrame.Parent = Main
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.048469387, 0, 0.0958466455, 0)
+ScrollingFrame.Size = UDim2.new(0, 353, 0, 242)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 100, 0)
+ScrollingFrame.ScrollBarThickness = 1
+ScrollingFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+TextBox.Parent = ScrollingFrame
+TextBox.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+TextBox.BackgroundTransparency = 0.600
+TextBox.Position = UDim2.new(0.00439868076, 0, 0, 0)
+TextBox.Size = UDim2.new(0, 351, 0, 232)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.SourceSansLight
+TextBox.MultiLine = true
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(138, 255, 148)
+TextBox.TextSize = 15.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_6.CornerRadius = UDim.new(0, 5)
+UICorner_6.Parent = TextBox
+
+UICorner_7.Parent = ScrollingFrame
+
+SaveBox.Name = "SaveBox"
+SaveBox.Parent = Main
+SaveBox.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+SaveBox.BackgroundTransparency = 0.600
+SaveBox.Position = UDim2.new(0.336031318, 0, 0.926517546, 0)
+SaveBox.Size = UDim2.new(0, 97, 0, 17)
+SaveBox.ClearTextOnFocus = false
+SaveBox.Font = Enum.Font.SourceSansLight
+SaveBox.MultiLine = true
+SaveBox.Text = " game:GetService(\"Players\").LocalPlayer"
+SaveBox.TextColor3 = Color3.fromRGB(138, 255, 148)
+SaveBox.TextSize = 15.000
+SaveBox.TextWrapped = true
+SaveBox.TextXAlignment = Enum.TextXAlignment.Left
+SaveBox.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_8.CornerRadius = UDim.new(0, 5)
+UICorner_8.Parent = SaveBox
+
+local EnabledPos = UDim2.new(0.314,0,0.173,0)
+local UnabledPos = UDim2.new(0.362,0,0.252,0)
+
+local tween = game:GetService("TweenService")
+
+function tweenPlay(t0,t1,t2)
+	tween:Create(t0,t1,t2):Play()
+end
+
+game:GetService("UserInputService").InputBegan:Connect(function(k,t)
+	if t then return end
+	if k.KeyCode == Enum.KeyCode.Insert then
+		local t0 = Main
+		local t1 = TweenInfo.new(.5)
+		local t2
+		if Notorious.Enabled then
+			t2 = {Position = UnabledPos}
+			tweenPlay(t0,t1,t2)
+			wait(.5)
+			Notorious.Enabled = false
+		else
+			t2 = {Position = EnabledPos}
+			tweenPlay(t0,t1,t2)
+			wait(.5)
+			Notorious.Enabled = true
+		end
+	end
+end)
+
+Save.MouseButton1Click:Connect(function()
+	writefile(SaveBox.Text..".lua",TextBox.Text)
+end)
+
+Clear.MouseButton1Click:Connect(function()
+	TextBox.Text = ""
+end)
+
+Execute.MouseButton1Click:Connect(function()
+	assert(loadstring(TextBox.Text,true)(),"Failed Execution")
+end)
