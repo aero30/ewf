@@ -1,4 +1,3 @@
-
 local char = game:GetService("Players").LocalPlayer.Character
 
 function Invis()
