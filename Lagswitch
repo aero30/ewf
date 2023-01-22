@@ -1,0 +1,38 @@
+
+local char = game:GetService("Players").LocalPlayer.Character
+
+function Invis()
+	local Model = Instance.new("Model",workspace)
+	Model.Name = " "
+	for i,v in pairs(char:GetChildren()) do
+	if v.Name == "HumanoidRootPart" or v.Name == "LowerTorso" or v.Name == "Humanoid" then
+		local Clone = v:Clone()
+		Clone.Parent = Model
+		for _,motor in pairs(Clone:GetChildren()) do
+			if motor:IsA("Motor") or motor:IsA("Motor6D") then
+				motor:Destroy()
+			end
+		end 
+	end
+end
+end
+
+function Uninvis()
+workspace[" "]:Destroy()
+end
+
+game:GetService("UserInputService").InputBegan:Connect(function(k,t)
+if t then return end
+if k.KeyCode == getgenv().KeyCode then 
+	if workspace:FindFirstChild(" ") then
+		Uninvis()
+		elseif not workspace:FindFirstChild(" ") then
+			Invis()
+		end
+	end
+end
+end)
+
+game:GetService("Players").LocalPlayer.CharacterRemoving:Connect(function()
+   Uninvis()
+end)
