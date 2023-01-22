@@ -1,6 +1,6 @@
+local Module = {}
+function Module.Invis()
 local char = game:GetService("Players").LocalPlayer.Character
-
-function Invis()
 	local Model = Instance.new("Model",workspace)
 	Model.Name = " "
 	for i,v in pairs(char:GetChildren()) do
@@ -16,7 +16,7 @@ function Invis()
 end
 end
 
-function Uninvis()
+function Module.Uninvis()
 workspace[" "]:Destroy()
 end
 
