@@ -861,10 +861,9 @@ local function synsaveinstance(CustomOptions)
 					rwait()
 				end
 			end
-			-- local ok, result = pcall(decompile, Script, Timeout, Timeout) -- ! This might break on Syn due to second param being bool or string (deprecated tho)
-			-- ldeccache[Script] = result
-			-- return ok and result or "--[[Failed to decompile\nReason:\n" .. (result or "") .. "\n]]"
-      return (decompile(Script))
+			local ok, result = pcall(decompile, Script, Timeout, Timeout) -- ! This might break on Syn due to second param being bool or string (deprecated tho)
+			ldeccache[Script] = result
+			return ok and result or "--[[Failed to decompile\nReason:\n" .. (result or "") .. "\n]]"
 		end
 	else
 		ldecompile = function()
